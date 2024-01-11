@@ -28,6 +28,26 @@ export const trendingOrders = [
     category: "Trending Orders",
     quantity: 1,
   },
+  {
+    id: 2,
+    mainMeal: "Chicken",
+    extra: "plus a drink",
+    image: I1,
+    price: 3500,
+    rating: 5,
+    category: "Trending Orders",
+    quantity: 1,
+  },
+  {
+    id: 3,
+    mainMeal: "Rice & beans",
+    extra: "plus a drink",
+    image: I1,
+    price: 3500,
+    rating: 5,
+    category: "Trending Orders",
+    quantity: 1,
+  },
 ];
 
 export const yourChoiceMeals = [
