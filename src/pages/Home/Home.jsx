@@ -25,15 +25,15 @@ const Home = () => {
         <div className="relative bg-transparent mealSlider shapedividers_com-9855 shapedividers_com-9343">
           <MealSlider />
           <div className="absolute about top-0 h-full w-full bg-[rgba(0,_0,_0,_0.559)] text-white flex flex-col items-center justify-center gap-5 lg:items-start lg:pl-[5rem]">
-            <div className="w-full">
-              <p className="mx-auto w-full  text-[clamp(0.9rem,_0.7rem_+_1vw,_1.5rem)] font-bold text-center leading-6 md:text-[clamp(1.5rem,_1rem_+_1vw,_3rem)] lg:text-left lg:leading-9 ">
+            <div className="w-full ">
+              <p className="mx-auto w-full  text-[clamp(0.9rem,_0.7rem_+_1vw,_1.5rem)] font-semibold text-center leading-6 md:text-[clamp(1.5rem,_1rem_+_1vw,_3rem)] lg:text-left lg:leading-10 ">
                 Scrumptious meal Ordering <br /> and Delivery made easy <br />
                 with new Goldenursh <br />
                 Order site.
               </p>
             </div>
             <a href="#trendingOrders">
-              <button className="text-[clamp(0.9rem,_1rem_+_1vw,_2rem)] px-[1.2rem] bg-nursh_dark_gold text-nursh_green">
+              <button className="text-[clamp(0.9rem,_1rem_+_1vw,_1.8rem)] px-[1.2rem] font-semibold  bg-nursh_dark_gold text-nursh_green ">
                 Order now
               </button>
             </a>
@@ -141,24 +141,24 @@ const Home = () => {
                 src={img1}
                 alt="connectImg"
               />
-              <ul className="flex flex-col items-center justify-center gap-2 *:w-full *:flex *:items-start *:justify-start *:gap-2">
+              <ul className="flex flex-col items-center justify-center gap-2 *:w-full *:flex *:items-center *:justify-start *:gap-2">
                 <li>
-                  <IoCheckboxOutline className="text-2xl" />
+                  <IoCheckboxOutline className="text-xl " />
                   <span> Connect with us via our social media handles</span>
                 </li>
                 <li>
-                  <IoCheckboxOutline className="text-2xl" />
+                  <IoCheckboxOutline className="text-xl" />
                   <span>Chat and Make enquires about your Order</span>
                 </li>
                 <li>
-                  <IoCheckboxOutline className="text-2xl" />
+                  <IoCheckboxOutline className="text-xl" />
                   <span>Fast reply from our social media handler</span>
                 </li>
               </ul>
             </figure>
           </div>
           <div className="flex items-center justify-center section2Container">
-            <figure className="section2 bg-white text-center shadow-card_shadow rounded-card_border_radius border-[0.3rem] border-solid border-nursh_dark_gold w-[min(40%,_7rem)] h-[85%] ml-4 max-sm:w-[min(45%,_8rem)] md:w-[min(50%,_10rem)] text-[clamp(0.3rem,_0.2rem_+_0.7vw,_1rem)] grid grid-rows-[10%,_90%]  font-semibold gap-2 overflow-hidden">
+            <figure className="section2 bg-white text-center shadow-card_shadow rounded-card_border_radius border-[0.3rem] border-solid border-nursh_dark_gold w-[min(40%,_7rem)] h-[85%] ml-4 max-sm:w-[min(45%,_8rem)] md:w-[min(50%,_10rem)] text-[clamp(0.6rem,_0.2rem_+_0.7vw,_1rem)] grid grid-rows-[10%,_90%]  font-semibold gap-2 overflow-hidden">
               <p className="mt-2">
                 Welcome <br /> This is Goldenursh <br /> support line.
               </p>

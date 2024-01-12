@@ -1,7 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import { mealSliderImages } from "../utils/data";
+import "swiper/css/effect-fade";
 
 const MealSlider = () => {
   return (
@@ -10,8 +12,10 @@ const MealSlider = () => {
       loop={true}
       autoplay={{
         delay: 5000,
+        waitForTransition: false,
       }}
-      modules={[]}
+      effect="fade"
+      modules={[Autoplay, EffectFade]}
     >
       {mealSliderImages?.map((img, index) => (
         <SwiperSlide className="z-0 m-0" key={index}>

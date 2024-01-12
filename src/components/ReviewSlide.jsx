@@ -1,8 +1,8 @@
 import React from "react";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation } from "swiper/modules";
 import "swiper/css";
-import {} from "swiper";
 
 import ReviewCard from "./ReviewCard";
 import { useState } from "react";
@@ -39,7 +39,7 @@ const ReviewSlide = ({ customerReview }) => {
             prevEl: prevRef.current,
             nextEl: nextRef.current,
           }}
-          modules={[]}
+          modules={[FreeMode, Navigation]}
           onInit={() => setInit(true)}
           className="swiper"
         >

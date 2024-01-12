@@ -15,21 +15,23 @@ const TMealCard = ({ item }) => {
   };
 
   return (
-    <div className="w-[90%]  max-w-[195px] md:max-w-[250px]  bg-white tMealCardContainer  ">
-      <div className="tMealCard rounded-card_border_radius p-2 w-full h-full text-[clamp(0.6rem,_0.4rem_+_0.8vw,_1rem)] shadow-card_shadow flex flex-col">
+    <div className="w-[90%]  max-w-[195px] md:max-w-[250px] lg:max-w-[300px] bg-white tMealCardContainer  ">
+      <div className="tMealCard rounded-card_border_radius p-2 w-full h-full text-[clamp(0.6rem,_0.4rem_+_0.6vw,_1rem)] shadow-card_shadow flex flex-col">
         <figure className="w-full h-full overflow-hidden rounded-card_border_radius">
           <motion.img
-            className="object-cover w-full h-40"
+            className="object-cover w-full h-40 md:h-[13rem]"
             variants={width >= 1024 ? variants : null}
             whileHover="hover"
             src={item?.image}
             alt={item?.name}
           />
         </figure>
-        <div className="flex flex-col justify-around tMealBottom">
+        <div className="flex flex-col justify-around py-2 tMealBottom">
           <div className="flex items-center justify-between top">
             <ul className="flex flex-col mealTitle">
-              <li className="font-semibold name">{item?.mainMeal}</li>
+              <li className="font-semibold name text-[clamp(0.2rem,_0.4rem_+_1vw,_1rem)]">
+                {item?.mainMeal}
+              </li>
               <li className="extra">{item?.extra}</li>
             </ul>
             <div className="flex flex-col items-end justify-center rating">
@@ -40,8 +42,8 @@ const TMealCard = ({ item }) => {
             </div>
           </div>
           <div className="flex items-center justify-between bottom">
-            <p className="price flex grow-[1.5] items-center font-semibold">
-              <TbCurrencyNaira className="text-[1rem]" />
+            <p className="price text-[clamp(0.6rem,_0.3rem_+_1vw,_1rem)] flex grow-[1.5] items-center font-semibold">
+              <TbCurrencyNaira className="text-[clamp(0.8rem,_0.5rem_+_1vw,_1.3rem)]" />
               {item?.price}
             </p>
 

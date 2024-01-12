@@ -4,6 +4,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import avatar from "../../assets/userProfile.png";
+import { user } from "../../utils/data";
 
 const Nav = () => {
   const [qty, setqty] = useState(null || 0);
@@ -16,7 +17,7 @@ const Nav = () => {
   }, [cartItems]); */
 
   return (
-    <div className="Nav flex gap-clamp_2 text-clamp_2">
+    <div className="flex Nav gap-clamp_2 text-clamp_2">
       <Link to={"/cart"}>
         <motion.div
           whileTap={{ scale: 0.8 }}
@@ -31,21 +32,21 @@ const Nav = () => {
         </motion.div>
       </Link>
       <NavLink to={"/profile"}>
-        {/* {user ? (
+        {user ? (
           <img
             src={user.image ? user.image : avatar}
             alt=""
-            className="w-10 h-10 object-cover rounded-lg md:w-12 md:h-12 "
+            className="object-cover w-10 h-10 rounded-lg md:w-12 md:h-12 "
             referrerPolicy="no-referrer"
           />
         ) : (
           <motion.button
-            className="w-10 h-10 grid place-content-center md:w-12 md:h-12"
+            className="grid w-10 h-10 place-content-center md:w-12 md:h-12"
             whileTap={{ scale: 0.8 }}
           >
             <BsPerson className="text-clamp_3" />
           </motion.button>
-        )} */}
+        )}
       </NavLink>
     </div>
   );

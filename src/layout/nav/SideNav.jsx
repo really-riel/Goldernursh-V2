@@ -38,7 +38,7 @@ const SideNav = ({ setIsSideNavOpen }) => {
         initial={{ opacity: 0, x: -300 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 200 }}
-        className="fixed top-0 left-0 bottom-0 w-full text-white grid grid-cols-[70%_30%] "
+        className="fixed top-0 left-0 bottom-0 w-full text-white grid grid-cols-[70%_30%] text-[clamp(1rem,_0.7rem_+_1vw,_1.3rem)] "
       >
         <section className="flex flex-col gap-6 py-4 bg-nursh_green">
           <div className="flex items-center justify-between px-2 ">
@@ -67,15 +67,19 @@ const SideNav = ({ setIsSideNavOpen }) => {
               </RequireAdminLink>
 
               <li
-                className="flex items-center gap-4 p-[0.7rem] "
+                className="flex  items-center gap-4 p-[0.7rem] cursor-pointer  "
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <HiOutlineViewGrid />
                 Categories
-                {isOpen ? <FiChevronDown /> : <FiChevronRight />}
+                {isOpen ? (
+                  <FiChevronDown className="mt-1" />
+                ) : (
+                  <FiChevronRight className="mt-1" />
+                )}
               </li>
               {isOpen && (
-                <ul className="pl-10 categoryList ">
+                <ul className="pl-10 flex flex-col justify-center  text-[clamp(0.2rem,_0.6rem_+_1vw,_0.9rem)] categoryList ">
                   <a
                     href="#trendingOrders"
                     onClick={() => setIsSideNavOpen(false)}
@@ -85,7 +89,9 @@ const SideNav = ({ setIsSideNavOpen }) => {
                     </li>
                   </a>
                   <a href="#yourChoice" onClick={() => setIsSideNavOpen(false)}>
-                    <li>Order based on your choice</li>
+                    <li className="flexitems-center gap-4 p-[0.7rem] ">
+                      Order based on your choice
+                    </li>
                   </a>
                 </ul>
               )}

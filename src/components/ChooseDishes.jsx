@@ -3,10 +3,9 @@ import { useState } from "react";
 
 import DishOptions from "./DishOptions";
 import { chooseOrderHeading } from "../utils/data";
-import { useStoreActions, useStoreState } from "easy-peasy";
 
 const ChooseDishes = ({ chooseDishes }) => {
-  const {
+  /*  const {
     mainDish,
     garnishing,
     soupPrice,
@@ -28,7 +27,17 @@ const ChooseDishes = ({ chooseDishes }) => {
     setMaindishQty,
     setGarnishingQty,
     setSoupQty,
-  } = useStoreActions((actions) => actions.chooseOrder);
+  } = useStoreActions((actions) => actions.chooseOrder); */
+
+  const [mainDish, setMainDish] = useState("");
+  const [garnishing, setGarnishing] = useState("");
+  const [soup, setSoup] = useState("");
+  const [soupPrice, setSoupPrice] = useState(null);
+  const [garnishingPrice, setGarnishingPrice] = useState(null);
+  const [mainDishPrice, setMainDishPrice] = useState(null);
+  const [mainDishQty, setMainDishQty] = useState(0);
+  const [garnishingQty, setGarnishingQty] = useState(0);
+  const [soupQty, setSoupQty] = useState(0);
 
   return (
     <div className="chooseDishes">
@@ -43,7 +52,7 @@ const ChooseDishes = ({ chooseDishes }) => {
           dishPrice={mainDishPrice}
           setDishPrice={setMainDishPrice}
           dishQty={mainDishQty}
-          setDishQty={setMaindishQty}
+          setDishQty={setMainDishQty}
         />
       </div>
       <div className="garnishing">

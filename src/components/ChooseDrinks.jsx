@@ -2,10 +2,9 @@ import React from "react";
 import DishOptions from "./DishOptions";
 import { chooseOrder, chooseOrderHeading } from "../utils/data";
 import { useState } from "react";
-import { useStoreActions, useStoreState } from "easy-peasy";
 
 const ChooseDrinks = ({ chooseDrinks }) => {
-  const {
+  /*   const {
     drink,
     drinkPrice,
     drinkQty,
@@ -21,7 +20,13 @@ const ChooseDrinks = ({ chooseDrinks }) => {
     setFruitJuice,
     setFruitJuicePrice,
     setFruitJuiceQty,
-  } = useStoreActions((actions) => actions.chooseOrder);
+  } = useStoreActions((actions) => actions.chooseOrder); */
+  const [drink, setDrink] = useState("");
+  const [drinkPrice, setDrinkPrice] = useState("");
+  const [drinkQty, setDrinkQty] = useState("");
+  const [fruitJuice, setFruitJuice] = useState("");
+  const [fruitJuicePrice, setFruitJuicePrice] = useState(null);
+  const [fruitJuiceQty, setFruitJuiceQty] = useState(0);
 
   return (
     <div className="chooseDrinks">
