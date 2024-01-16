@@ -135,85 +135,97 @@ export const chooseOrder = {
     mainDish: [
       {
         foodType: "rice",
-        price: "250",
+        price: 250,
       },
       {
         foodType: "Jollof Rice",
-        price: "300",
+        price: 300,
       },
       {
         foodType: "Fried Rice",
-        price: "350",
+        price: 350,
       },
       {
         foodType: "Bean",
-        price: "150",
+        price: 150,
       },
       {
         foodType: "Yam",
-        price: "200",
+        price: 200,
       },
       {
         foodType: "Porridge",
-        price: "250",
+        price: 250,
+      },
+      {
+        foodType: "rice and beans",
+        price: 300,
+      },
+      {
+        foodType: "Beans and Yam",
+        price: 250,
+      },
+      {
+        foodType: "Rice and Spag",
+        price: 250,
       },
     ],
 
     garnishing: [
       {
         foodType: "Beef",
-        price: "100",
+        price: 100,
       },
       {
         foodType: "Turkey",
-        price: "300",
+        price: 300,
       },
       {
         foodType: "Chicken",
-        price: "250",
+        price: 250,
       },
       {
         foodType: "Goat meat",
-        price: "300",
+        price: 300,
       },
       {
         foodType: "Snail",
-        price: "300",
+        price: 300,
       },
       {
         foodType: "Fish",
-        price: "150",
+        price: 150,
       },
       {
         foodType: "Gizzard",
-        price: "150",
+        price: 150,
       },
     ],
 
     soup: [
       {
         foodType: "Pepper Soup",
-        price: "250",
+        price: 250,
       },
       {
         foodType: "Goatmeat Soup",
-        price: "300",
+        price: 300,
       },
       {
         foodType: "Ogbono Soup",
-        price: "350",
+        price: 350,
       },
       {
         foodType: "Efo riro",
-        price: "150",
+        price: 150,
       },
       {
         foodType: "Gbegiri",
-        price: "200",
+        price: 200,
       },
       {
         foodType: "Afang Soup",
-        price: "250",
+        price: 250,
       },
     ],
   },
@@ -222,46 +234,46 @@ export const chooseOrder = {
     Drink: [
       {
         foodType: "Pepsi",
-        price: "150",
+        price: 150,
       },
       {
         foodType: "Coca-Cola",
-        price: "200",
+        price: 200,
       },
       {
         foodType: "Sprite",
-        price: "150",
+        price: 150,
       },
       {
         foodType: "Maltina",
-        price: "300",
+        price: 300,
       },
       {
         foodType: "Fanta",
-        price: "150",
+        price: 150,
       },
       {
         foodType: "Nutri-milk",
-        price: "250",
+        price: 250,
       },
     ],
 
     FruitJuice: [
       {
         foodType: "Smoothie",
-        price: "300",
+        price: 300,
       },
       {
         foodType: "5-Alive",
-        price: "500",
+        price: 500,
       },
       {
         foodType: "Chi Exotic",
-        price: "150",
+        price: 150,
       },
       {
         foodType: "Chi Active",
-        price: "300",
+        price: 300,
       },
     ],
   },
@@ -429,5 +441,97 @@ export const orderSummaryData = [
     id: 4,
     quantity: 50,
     label: "Delivered",
+  },
+];
+
+export const allOrdersData = [
+  {
+    address: "ogun state",
+    deliveryFee: 1500,
+    id: 1234567,
+    orderItems: [
+      {
+        category: "Trending Orders",
+        image: I5,
+        id: 1,
+        mainMeal: "Jollof Rice",
+        quantity: 2,
+        price: 300,
+        address: "ogun state",
+      },
+      {
+        id: 2,
+        image: I3,
+        mainMeal: "Fried Rice",
+        quantity: 3,
+        price: 300,
+        address: "ogun state",
+      },
+    ],
+    orderStatus: "delivered",
+    timeStamp: {
+      seconds: 10000,
+      nanoseconds: 1000000,
+    },
+    subTotal: 3500,
+    total: 10000,
+  },
+  {
+    address: "ogun state",
+    deliveryFee: 500,
+    id: 1234567,
+    orderItems: [
+      {
+        category: "Trending Orders",
+        image: I5,
+        id: 1,
+        mainMeal: "Jollof Rice",
+        quantity: 2,
+        price: 300,
+        address: "ogun state",
+      },
+      {
+        id: 2,
+        image: I3,
+        mainMeal: "Fried Rice",
+        quantity: 3,
+        price: 300,
+        address: "ogun state",
+      },
+    ],
+    orderStatus: "pending",
+    timeStamp: {
+      seconds: 80070589,
+      nanoseconds: 538073900,
+    },
+  },
+  {
+    address: "ogun state",
+    deliveryFee: 500,
+    id: 1234567,
+    orderItems: [
+      {
+        category: "Trending Orders",
+        image: I5,
+        id: 1,
+        mainMeal: "White Rice",
+        quantity: 2,
+        price: 300,
+        address: "ogun state",
+      },
+      {
+        id: 2,
+        image: I3,
+        mainMeal: " Rice & Beans",
+        quantity: 3,
+        price: 300,
+        address: "ogun state",
+      },
+    ],
+    orderStatus: "canceled",
+    timeStamp: {
+      seconds: 3005843,
+      nanoseconds: 78778900,
+    },
   },
 ];

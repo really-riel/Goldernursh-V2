@@ -23,13 +23,13 @@ const ChooseDrinks = ({ chooseDrinks }) => {
   } = useStoreActions((actions) => actions.chooseOrder); */
   const [drink, setDrink] = useState("");
   const [drinkPrice, setDrinkPrice] = useState("");
-  const [drinkQty, setDrinkQty] = useState("");
+  const [drinkQty, setDrinkQty] = useState(0);
   const [fruitJuice, setFruitJuice] = useState("");
-  const [fruitJuicePrice, setFruitJuicePrice] = useState(null);
+  const [fruitJuicePrice, setFruitJuicePrice] = useState(0);
   const [fruitJuiceQty, setFruitJuiceQty] = useState(0);
 
   return (
-    <div className="chooseDrinks">
+    <div className="chooseDrinks flex flex-col gap-[clamp(0.5rem,_0.5rem_+_1vw,_1rem)]  ">
       <h2>Drinks</h2>
       <div className="drink">
         <DishOptions

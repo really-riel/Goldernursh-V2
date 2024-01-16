@@ -29,7 +29,7 @@ const ChooseDishes = ({ chooseDishes }) => {
     setSoupQty,
   } = useStoreActions((actions) => actions.chooseOrder); */
 
-  const [mainDish, setMainDish] = useState("");
+  const [mainDish, setMainDish] = useState(0);
   const [garnishing, setGarnishing] = useState("");
   const [soup, setSoup] = useState("");
   const [soupPrice, setSoupPrice] = useState(null);
@@ -40,7 +40,7 @@ const ChooseDishes = ({ chooseDishes }) => {
   const [soupQty, setSoupQty] = useState(0);
 
   return (
-    <div className="chooseDishes">
+    <div className="chooseDishes flex flex-col gap-[clamp(0.5rem,_0.5rem_+_1vw,_1rem)]">
       <h2>Dishes</h2>
 
       <div className="mainDish">

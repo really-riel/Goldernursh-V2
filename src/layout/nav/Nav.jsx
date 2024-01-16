@@ -36,12 +36,12 @@ const Nav = () => {
           <img
             src={user.image ? user.image : avatar}
             alt=""
-            className="object-cover w-10 h-10 rounded-lg md:w-12 md:h-12 "
+            className="object-cover w-10 h-10 rounded-lg "
             referrerPolicy="no-referrer"
           />
         ) : (
           <motion.button
-            className="grid w-10 h-10 place-content-center md:w-12 md:h-12"
+            className="grid w-10 h-10 place-content-center "
             whileTap={{ scale: 0.8 }}
           >
             <BsPerson className="text-clamp_3" />

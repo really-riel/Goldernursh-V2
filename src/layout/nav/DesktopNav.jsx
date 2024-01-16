@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { RequireAdminLink } from "../../components/RequireLinks";
 import { FaUserCog } from "react-icons/fa";
 import OptionsPopUp from "../../components/OptionsPopUp";
+import Nav from "./Nav";
 
 const DesktopNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ const DesktopNav = () => {
   return (
     <>
       <nav className="hidden pr-4 desktopNav lg:flex lg:items-center lg:justify-center">
-        <ul className="flex items-center justify-center gap-[0.4rem] *:p-[0.5rem_1.2rem]">
+        <ul className="flex items-center justify-center gap-[0.4rem] *:p-[0.2rem_1rem]">
           <NavLink to={"/"} onClick={() => setIsOpen(false)}>
             <motion.li whileTap={{ scale: 0.8 }}>Home</motion.li>
           </NavLink>
@@ -80,7 +81,7 @@ const DesktopNav = () => {
             </NavLink>
           )} */}
 
-          <TabletNav />
+          <Nav />
         </ul>
       </nav>
       {/* {isLogoutOptOpen && (

@@ -18,7 +18,7 @@ const Header = () => {
       <motion.div className=" lg:hidden" whileTap={{ scale: 0.8 }}>
         <GiHamburgerMenu
           className="cursor-pointer md:text-clamp_1"
-          size={width >= 768 ? "2.5rem" : "1.5rem"}
+          size={width >= 768 ? "1.8rem" : "1.5rem"}
           onClick={() => setIsSideNavOpen(!isSideNavOpen)}
         />
       </motion.div>

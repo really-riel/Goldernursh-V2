@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsInstagram, BsTwitter, BsWhatsapp } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { IoIosArrowDropup } from "react-icons/io";
@@ -6,7 +6,22 @@ import useWindowSize from "../../hooks/useWindowSize";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const [isShowButton, setIsShowButton] = useState(false);
+
   const { height } = useWindowSize();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+      setIsShowButton(scrollY > window.innerHeight);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const year = new Date().getFullYear();
   const socialIcons = [
@@ -61,16 +76,18 @@ const Footer = () => {
             </button>
           </form>
         </section>
-        <section>
-          <a
-            role="button"
-            className="text-right flex items-center justify-center gap-[0.2rem] bg-nursh_cream text-black py-2 md:w-auto md:bg-transparent md:font-semibold md:text-white w-full  "
-            onClick={handleGoToTop}
-          >
-            Back to Top{" "}
-            <IoIosArrowDropup className="text-[clamp(1rem,_1rem_+_1vw,_1.3rem)]" />
-          </a>
-        </section>
+        {isShowButton && (
+          <section>
+            <a
+              role="button"
+              className="text-right flex items-center justify-center gap-[0.2rem] bg-nursh_cream text-black py-2 md:w-auto md:bg-transparent md:font-semibold md:text-white w-full  "
+              onClick={handleGoToTop}
+            >
+              Back to Top{" "}
+              <IoIosArrowDropup className="text-[clamp(1rem,_1rem_+_1vw,_1.3rem)]" />
+            </a>
+          </section>
+        )}
       </div>
       <p className="footing py-[0.4rem] text-center border-t-[0.05rem] border-solid border-nursh_cream w-[95%]">
         Copyright {year} &copy; All rights Reserved.{" "}
