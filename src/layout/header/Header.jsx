@@ -23,7 +23,7 @@ const Header = () => {
         />
       </motion.div>
       <div className="flex gap-clamp_1">
-        {width < 1200 && <Nav />}
+        {width < 1024 && <Nav />}
 
         <Link to={"/"}>
           <Logo />

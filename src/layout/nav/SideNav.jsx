@@ -131,7 +131,7 @@ const SideNav = ({ setIsSideNavOpen }) => {
                 </li>
               </NavLink>
               {/* login */}
-              <ShowOnLogout>
+              {/* <ShowOnLogout>
                 <NavLink
                   to={"/auth/login"}
                   onClick={() => setIsSideNavOpen(false)}
@@ -140,7 +140,15 @@ const SideNav = ({ setIsSideNavOpen }) => {
                     <HiOutlineArrowRightOnRectangle /> Login
                   </li>
                 </NavLink>
-              </ShowOnLogout>
+              </ShowOnLogout> */}
+              <NavLink
+                to={"/auth/login"}
+                onClick={() => setIsSideNavOpen(false)}
+              >
+                <li className="flex items-center gap-4 p-[0.7rem] ">
+                  <HiOutlineArrowRightOnRectangle /> Login
+                </li>
+              </NavLink>
 
               {/* logout */}
               <ShowOnLogin>

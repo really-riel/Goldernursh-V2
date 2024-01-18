@@ -15,7 +15,7 @@ const TMealCard = ({ item }) => {
   };
 
   return (
-    <div className="  min-w-[178px] md:min-w-[250px] lg:min-w-[300px] bg-white tMealCardContainer  ">
+    <div className="  w-[178px] md:w-[250px] lg:w-[300px] bg-white tMealCardContainer  ">
       <div className="tMealCard rounded-card_border_radius p-2 w-full h-full text-[clamp(0.6rem,_0.4rem_+_0.6vw,_1rem)] shadow-card_shadow flex flex-col">
         <figure className="w-full h-full overflow-hidden rounded-card_border_radius">
           <motion.img

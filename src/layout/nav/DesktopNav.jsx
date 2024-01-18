@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiChevronDown, FiChevronRight } from "react-icons/fi";
 import TabletNav from "./Nav";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Navigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { toast } from "react-toastify";
@@ -12,6 +12,23 @@ import Nav from "./Nav";
 
 const DesktopNav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
+  console.log(pathname);
+
+  const scrollToHome = (sectionId) => {
+    const homeSection = document.getElementById(sectionId); // Replace 'home-section' with the actual id of your target element
+    /*  if (pathname !== "/") {
+      return <Navigate to={pathname} />;
+    }
+    homeSection.scrollIntoView({ behavior: "smooth" }); */
+    return pathname !== "/" ? (
+      <Navigate to="/" replace={true} />
+    ) : (
+      homeSection.scrollIntoView({ behavior: "smooth" })
+    );
+
+    console.log(sectionId);
+  };
 
   /*   const { setIsAdmin, deleteUser, setAdminRole } = useStoreActions(
     (actions) => actions.auth
@@ -34,9 +51,9 @@ const DesktopNav = () => {
             </NavLink>
           </RequireAdminLink>
 
-          <motion.li
+          <li
             whileTap={{ scale: 0.8 }}
-            className="relative flex items-center justify-center category"
+            className="relative flex items-center justify-center cursor-pointer category"
             onClick={() => setIsOpen(!isOpen)}
           >
             <span>Categories</span>
@@ -46,22 +63,31 @@ const DesktopNav = () => {
               <FiChevronRight className="mt-[0.2rem]" />
             )}
             {isOpen && (
-              <div className="categoryList absolute top-12 text-[clamp(0.5rem,_0.1rem_+_1vw,_0.8rem)] p-[min(3vh,_0.4rem)_0] w-[8rem] bg-white rounded-card_border_radius text-black  ">
-                <ul className="flex flex-col items-center *:p-[0.5rem_1.2rem]">
-                  <Link to={"/#trendingOrders"}>
-                    <li onClick={(e) => setIsOpen(false) && console.log("ok")}>
-                      Trending List
-                    </li>
-                  </Link>
-                  <Link to={"/#yourChoice"}>
-                    <li onClick={() => setIsOpen(false)}>
-                      Order based on your choice
-                    </li>
-                  </Link>
+              <div className="categoryList absolute top-12 text-[clamp(0.5rem,_0.1rem_+_1vw,_0.8rem)] p-[min(3vh,_0.4rem)_0] w-[8rem] bg-white rounded-card_border_radius text-black shadow-lg overflow-hidden ">
+                <ul className="flex flex-col items-center *:p-[0.5rem_1.2rem] *:cursor-pointer ">
+                  <li
+                    className="hover:bg-nursh_light_gold"
+                    onClick={(e) => {
+                      setIsOpen(false);
+                      scrollToHome("trendingOrders");
+                    }}
+                  >
+                    Trending List
+                  </li>
+
+                  <li
+                    className="hover:bg-nursh_light_gold"
+                    onClick={() => {
+                      setIsOpen(false);
+                      scrollToHome("yourChoice");
+                    }}
+                  >
+                    Order based on your choice
+                  </li>
                 </ul>
               </div>
             )}
-          </motion.li>
+          </li>
           <NavLink to={"/contact"}>
             <motion.li whileTap={{ scale: 0.8 }}>Contact</motion.li>
           </NavLink>

@@ -17,7 +17,7 @@ const Nav = () => {
   }, [cartItems]); */
 
   return (
-    <div className="flex Nav gap-clamp_2 text-clamp_2">
+    <div className="flex Nav gap-clamp_2 text-clamp_2 ">
       <Link to={"/cart"}>
         <motion.div
           whileTap={{ scale: 0.8 }}

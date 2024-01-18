@@ -56,14 +56,14 @@ const CustomerOrders = () => {
             variants={variant}
             initial="initial"
             animate="animate"
-            className="tableContainer w-[95%] max-w-[1000px] flex flex-col items-center justify-center  "
+            className="flex flex-col items-center justify-center w-full tableContainer "
           >
-            <div className="text-[clamp(0.5rem,_0.5rem_+_1vw,_1rem)] w-full  bg-white shadow-card_shadow rounded-2xl p-1 overflow-auto  ">
-              <div className="grid divide-y">
+            <div className="text-[clamp(0.5rem,_0.5rem_+_1vw,_1rem)]   bg-white shadow-card_shadow rounded-2xl p-4 overflow-auto  w-[95%] max-w-[1000px] min-w-[400px] ">
+              <div className="grid divide-y ">
                 {allOrdersData.map((orders) =>
                   orders.orderItems.map((item) => (
                     <div
-                      className="grid grid-cols-6 place-items-center"
+                      className="grid w-full grid-cols-6 place-items-center"
                       key={item.id}
                     >
                       <p>
