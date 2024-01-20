@@ -3,7 +3,7 @@ import authImg from "../assets/authImage.png";
 
 const AuthSectionDesign = () => {
   return (
-    <section className="items-start justify-center hidden authSectionDesign md:flex md:py-12">
+    <section className="justify-center hidden authSectionDesign md:flex md:py-12 ">
       <div className="relative flex items-center justify-center cover lg:flex-col">
         <figure className="w-[clamp(7rem,_1rem_+_1vw,_9rem)]">
           <img className="w-full h-full" src={authImg} alt="loginImg" />
@@ -14,7 +14,7 @@ const AuthSectionDesign = () => {
             Your one - stop <br /> restaurant <br /> {"(Online and On - site)"}
           </p>
         </div>
-        <div className="absolute h-3 underline bg-nursh_dark_olive lg:hidden"></div>
+        <div className="absolute -bottom-8 h-2 underline bg-nursh_dark_olive lg:hidden w-[70%]"></div>
       </div>
     </section>
   );
