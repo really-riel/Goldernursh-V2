@@ -9,6 +9,7 @@ import { RequireAdminLink } from "../../components/RequireLinks";
 import { FaUserCog } from "react-icons/fa";
 import OptionsPopUp from "../../components/OptionsPopUp";
 import Nav from "./Nav";
+import { user } from "../../utils/data";
 
 const DesktopNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -93,6 +94,14 @@ const DesktopNav = () => {
           </NavLink>
           <NavLink to={"/orders"}>
             <motion.li whileTap={{ scale: 0.8 }}>Orders</motion.li>
+          </NavLink>
+          <NavLink to={"auth/login"}>
+            <motion.li
+              whileTap={{ scale: 0.8 }}
+              onClick={() => setIsOpen(false)}
+            >
+              Login
+            </motion.li>
           </NavLink>
           {/* {user ? (
             <Link onClick={() => setIsLogOutOptOpen(true)}>Logout</Link>

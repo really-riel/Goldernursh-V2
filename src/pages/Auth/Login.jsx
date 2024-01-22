@@ -45,7 +45,9 @@ const Login = () => {
               className="flex flex-col gap-4 pt-[clamp(1rem,_0.5rem_+_1vw,_3rem)]"
               onSubmit={handleSignIn}
             >
-              {/* <label htmlFor="loginEmail">E-mail Address</label> */}
+              <label className="offscreen" htmlFor="loginEmail">
+                E-mail Address
+              </label>
               <input
                 className="p-3 outline-none bg-nursh_light_gold rounded-card_border_radius placeholder:text-black "
                 type="email"
@@ -55,7 +57,9 @@ const Login = () => {
                 placeholder="E-mail Address"
                 required
               />
-              {/* <label htmlFor="password">password</label> */}
+              <label className="offscreen" htmlFor="password">
+                password
+              </label>
               <div className="flex items-center justify-center passwordWrapper bg-nursh_light_gold rounded-card_border_radius ">
                 <input
                   className="p-3 outline-none grow bg-nursh_light_gold rounded-2xl placeholder:text-black "
