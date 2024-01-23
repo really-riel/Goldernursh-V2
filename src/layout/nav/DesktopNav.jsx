@@ -46,11 +46,14 @@ const DesktopNav = () => {
             <motion.li whileTap={{ scale: 0.8 }}>Home</motion.li>
           </NavLink>
 
-          <RequireAdminLink>
+          {/*  <RequireAdminLink>
             <NavLink to={"/admin/dashboard"}>
-              <li>Admin</li>
+              <li className="hover:bg-nursh_light_gold">Admin</li>
             </NavLink>
-          </RequireAdminLink>
+          </RequireAdminLink> */}
+          <NavLink to={"/admin/dashboard"}>
+            <li className="hover:text-nursh_light_gold">Admin</li>
+          </NavLink>
 
           <li
             whileTap={{ scale: 0.8 }}
@@ -89,9 +92,9 @@ const DesktopNav = () => {
               </div>
             )}
           </li>
-          <NavLink to={"/contact"}>
+          {/* <NavLink to={"/contact"}>
             <motion.li whileTap={{ scale: 0.8 }}>Contact</motion.li>
-          </NavLink>
+          </NavLink> */}
           <NavLink to={"/orders"}>
             <motion.li whileTap={{ scale: 0.8 }}>Orders</motion.li>
           </NavLink>

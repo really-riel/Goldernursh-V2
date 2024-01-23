@@ -535,3 +535,22 @@ export const allOrdersData = [
     },
   },
 ];
+
+export const dishesData = {
+  isLoading: false,
+  docItems: [
+    { id: 1, image: I3, mainMeal: "jollof", extra: "a drink", price: 1000 },
+    { id: 2, image: I2, mainMeal: "white rice", extra: "a drink", price: 2000 },
+    { id: 3, image: I4, mainMeal: "poddrige", extra: "a drink", price: 1400 },
+    { id: 4, image: I1, mainMeal: "fried rice", extra: "a drink", price: 1500 },
+  ],
+};
+export const drinksData = {
+  isLoading: false,
+  docItems: [
+    { id: 1, image: I3, mainMeal: "jollof", extra: "a drink", price: 1000 },
+    { id: 1, image: I3, mainMeal: "jollof", extra: "a drink", price: 1000 },
+    { id: 1, image: I3, mainMeal: "jollof", extra: "a drink", price: 1000 },
+    { id: 1, image: I3, mainMeal: "jollof", extra: "a drink", price: 1000 },
+  ],
+};

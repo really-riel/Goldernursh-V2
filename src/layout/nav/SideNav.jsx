@@ -40,7 +40,7 @@ const SideNav = ({ setIsSideNavOpen }) => {
         exit={{ opacity: 0, x: 200 }}
         className="fixed top-0 left-0 bottom-0 w-full text-white grid grid-cols-[70%_30%] text-[clamp(1rem,_0.7rem_+_1vw,_1.3rem)] "
       >
-        <section className="flex flex-col gap-6 py-4 bg-nursh_green">
+        <section className="flex flex-col gap-6 py-4 overflow-auto bg-nursh_green">
           <div className="flex items-center justify-between px-2 ">
             <Logo />
             <FaTimes
@@ -96,11 +96,11 @@ const SideNav = ({ setIsSideNavOpen }) => {
                 </ul>
               )}
 
-              <NavLink to={"/contact"} onClick={() => setIsSideNavOpen(false)}>
+              {/*  <NavLink to={"/contact"} onClick={() => setIsSideNavOpen(false)}>
                 <li className="flex items-center gap-4 p-[0.7rem] ">
                   <MdOutlineConnectWithoutContact /> Contact
                 </li>
-              </NavLink>
+              </NavLink> */}
               <NavLink
                 className="cart"
                 to={"/cart"}

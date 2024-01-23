@@ -59,7 +59,7 @@ const CustomerOrders = () => {
             className="flex flex-col items-center justify-center tableContainer w-[95%]  "
           >
             <div className="text-[clamp(0.5rem,_0.5rem_+_1vw,_1rem)] w-full   p-4 overflow-auto  ">
-              <div className="grid  bg-white divide-y shadow-card_shadow rounded-2xl min-w-[400px] w-full lg:w-[1000px] mx-auto  ">
+              <div className="grid  bg-white divide-y shadow-card_shadow rounded-2xl min-w-[500px] w-full lg:w-[1000px] mx-auto  ">
                 {allOrdersData.map((orders) =>
                   orders.orderItems.map((item) => (
                     <div
@@ -119,11 +119,11 @@ const CustomerOrders = () => {
             </div>
           </motion.section>
 
-          <div className="mt-3 ml-auto ">
+          {/* <div className="mt-3 ml-auto ">
             <button className="px-3 py-1 text-white bg-nursh_dark_olive ">
               View all
             </button>
-          </div>
+          </div> */}
         </>
       )}
     </main>

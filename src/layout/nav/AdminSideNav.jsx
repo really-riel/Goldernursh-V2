@@ -20,23 +20,17 @@ import {
   ShowOnLogin,
   ShowOnLogout,
 } from "../../components/RequireLinks";
-import { signOut } from "firebase/auth";
-import { auth } from "../../utils/firebase";
-import { toast } from "react-toastify";
-import { useStoreActions, useStoreState } from "easy-peasy";
 import useWindowSize from "../../hooks/useWindowSize";
 import OptionsPopUp from "../../components/OptionsPopUp";
 
 const AdminSideNav = ({ setIsSideNavOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLogoutOptOpen, setIsLogOutOptOpen] = useState(false);
-  const { deleteUser, setIsAdmin, setAdminRole } = useStoreActions(
-    (actions) => actions.auth
-  );
+
   const { width } = useWindowSize();
 
   const handleLogout = async () => {
-    try {
+    /* try {
       await signOut(auth);
       if (width < 1200) setIsSideNavOpen(false);
       setAdminRole("");
@@ -48,7 +42,7 @@ const AdminSideNav = ({ setIsSideNavOpen }) => {
       error.code === "auth/internal-error"
         ? toast.error("check your Network")
         : toast.error(error.code.split("/")[1]);
-    }
+    } */
   };
 
   const handleClick = () => {
@@ -62,74 +56,111 @@ const AdminSideNav = ({ setIsSideNavOpen }) => {
         initial={{ opacity: 0, x: -300 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 200 }}
-        className="sideNav adminSideNav"
+        className="sideNav adminSideNav h-full fixed lg:static top-0 left-0 bottom-0 w-full text-white grid grid-cols-[70%_30%] text-[clamp(1rem,_0.7rem_+_1vw,_1.3rem)] lg:grid-cols-1  "
       >
-        <section>
-          <div>
+        <section className="flex flex-col gap-6 py-4 overflow-auto bg-nursh_green">
+          <div className="flex items-center justify-between px-2 ">
             <Logo />
-            <FaTimes className="cancelButton" onClick={handleClick} />
+            <FaTimes className="cancelButton lg:hidden" onClick={handleClick} />
           </div>
           <nav>
-            <h2>MENU</h2>
-            <ul>
-              <NavLink to={"/admin/dashboard"} onClick={handleClick}>
-                <li>
+            <h2 className="text-[clamp(0.7rem,_0.6rem_+_1vw,_1.2rem)] p-[0.7rem] ">
+              MENU
+            </h2>
+            <ul className="flex flex-col">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-nursh_dark_olive border-r-[0.2rem] border-nursh_light_gold"
+                    : undefined
+                }
+                to={"/admin/dashboard"}
+                onClick={handleClick}
+              >
+                <li className="flex items-center gap-4 p-[0.7rem] ">
                   <BsGrid1X2Fill /> Dashboard
                 </li>
               </NavLink>
 
-              <NavLink to={"/admin/staffs"} onClick={handleClick}>
-                <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-nursh_dark_olive border-r-[0.2rem] border-nursh_light_gold"
+                    : undefined
+                }
+                to={"/admin/staffs"}
+                onClick={handleClick}
+              >
+                <li className="flex items-center gap-4 p-[0.7rem] ">
                   <FaUsers /> Staffs
                 </li>
               </NavLink>
 
-              <NavLink to={"/admin/orders"} onClick={handleClick}>
-                <li>
-                  <RiShoppingBag3Line /> Orders
-                </li>
-              </NavLink>
               <NavLink
-                className="cart"
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-nursh_dark_olive border-r-[0.2rem] border-nursh_light_gold"
+                    : undefined
+                }
                 to={"/admin/orders"}
                 onClick={handleClick}
               >
-                <li>
+                <li className="flex items-center gap-4 p-[0.7rem] ">
                   <FiShoppingBag /> Orders
                 </li>
               </NavLink>
-              <NavLink className="" to={"/admin/dishes"} onClick={handleClick}>
-                <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-nursh_dark_olive border-r-[0.2rem] border-nursh_light_gold"
+                    : undefined
+                }
+                to={"/admin/dishes"}
+                onClick={handleClick}
+              >
+                <li className="flex items-center gap-4 p-[0.7rem] ">
                   <BiDish />
                   Dishes
                 </li>
               </NavLink>
               <NavLink
-                className="orders"
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-nursh_dark_olive orders border-r-[0.2rem] border-nursh_light_gold"
+                    : undefined
+                }
                 to={"/admin/inventory"}
                 onClick={handleClick}
               >
-                <li>
+                <li className="flex items-center gap-4 p-[0.7rem] ">
                   <MdOutlineInventory2 /> Inventory
                 </li>
               </NavLink>
               <HideForNoneAdminRole>
                 <NavLink
-                  className="orders"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "bg-nursh_dark_olive border-r-[0.2rem] border-nursh_light_gold"
+                      : undefined
+                  }
                   to={"/admin/messages"}
                   onClick={handleClick}
                 >
-                  <li>
+                  <li className="flex items-center gap-4 p-[0.7rem] ">
                     <HiOutlineMail /> Messages
                   </li>
                 </NavLink>
               </HideForNoneAdminRole>
               <NavLink
-                className="orders"
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-nursh_dark_olive border-r-[0.2rem] border-nursh_light_gold"
+                    : undefined
+                }
                 to={"/admin/notification"}
                 onClick={handleClick}
               >
-                <li>
+                <li className="flex items-center gap-4 p-[0.7rem] ">
                   <BiBell />
                   Notification
                 </li>
@@ -138,7 +169,7 @@ const AdminSideNav = ({ setIsSideNavOpen }) => {
               {/* login */}
               <ShowOnLogout>
                 <NavLink to={"/auth/login"} onClick={handleClick}>
-                  <li>
+                  <li className="flex items-center gap-4 p-[0.7rem] ">
                     <HiOutlineArrowRightOnRectangle /> Login
                   </li>
                 </NavLink>
@@ -147,6 +178,7 @@ const AdminSideNav = ({ setIsSideNavOpen }) => {
               {/* logout */}
               <ShowOnLogin>
                 <li
+                  className="flex items-center gap-4 p-[0.7rem] "
                   onClick={() => setIsLogOutOptOpen(true)}
                   style={{ cursor: "pointer" }}
                 >
@@ -156,7 +188,10 @@ const AdminSideNav = ({ setIsSideNavOpen }) => {
             </ul>
           </nav>
         </section>
-        <section onClick={handleClick}></section>
+        <section
+          className="bg-black bg-opacity-50 lg:hidden"
+          onClick={handleClick}
+        ></section>
       </motion.div>
 
       {isLogoutOptOpen && (

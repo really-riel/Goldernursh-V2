@@ -18,6 +18,7 @@ import Dashboard from "./pages/Admin/Dashboard";
 import Staffs from "./pages/Admin/Staffs";
 import Dishes from "./pages/Admin/Dishes";
 import Missing from "./pages/Missing/Missing";
+import ProfileEdit from "./pages/Profile/ProfileEdit";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -25,7 +26,10 @@ const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="cart" element={<Cart />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="profile">
+          <Route index element={<Profile />} />
+          <Route path="edit" element={<ProfileEdit />} />
+        </Route>
         <Route path="orders" element={<CustomerOrders />} />
         <Route path="choose-order" element={<ChooseOrder />} />
 

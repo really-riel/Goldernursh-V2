@@ -50,7 +50,7 @@ export const RequireAuthAndNonAdminRole = ({ children }) => {
 };
 
 export const RequireAdminLink = ({ children }) => {
-  /* return isAdmin ? children : null; */
+  return true ? children : null;
 };
 
 export const RequireAdminRoute = ({ children }) => {

@@ -23,7 +23,7 @@ const Nav = () => {
           whileTap={{ scale: 0.8 }}
           className="cart relative h-full grid place-content-center px-[0.4rem ]"
         >
-          <FiShoppingCart className="text-white" />
+          <FiShoppingCart className="text-white lg:mr-2" />
           {qty > 0 && (
             <p className="count absolute top-[-0.03rem] right-[-0.05rem] text-[0.9rem] font-semibold bg-nursh_light_gold ">
               {qty}
