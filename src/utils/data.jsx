@@ -548,9 +548,9 @@ export const dishesData = {
 export const drinksData = {
   isLoading: false,
   docItems: [
-    { id: 1, image: I3, mainMeal: "jollof", extra: "a drink", price: 1000 },
-    { id: 1, image: I3, mainMeal: "jollof", extra: "a drink", price: 1000 },
-    { id: 1, image: I3, mainMeal: "jollof", extra: "a drink", price: 1000 },
-    { id: 1, image: I3, mainMeal: "jollof", extra: "a drink", price: 1000 },
+    { id: 1, image: I3, drink: "Fanta", extra: "a drink", price: 1000 },
+    { id: 1, image: I3, drink: "Fanta", extra: "a drink", price: 1000 },
+    { id: 1, image: I3, drink: "Fanta", extra: "a drink", price: 1000 },
+    { id: 1, image: I3, drink: "Fanta", extra: "a drink", price: 1000 },
   ],
 };

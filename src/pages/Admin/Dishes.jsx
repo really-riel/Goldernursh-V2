@@ -29,9 +29,9 @@ const Dishes = () => {
   };
 
   return (
-    <main className="Dishes">
-      <div className="sectionsContainer">
-        <section className="dishesSection">
+    <main className="relative items-center Dishes">
+      <div className="sectionsContainer w-[95%] py-4 px-2">
+        <section className="flex flex-col justify-center gap-2 mb-4 dishesSection">
           <h1>Dishes</h1>
           <p>
             Add Edit or Delete Dishes <br /> and Drinks.
@@ -41,7 +41,7 @@ const Dishes = () => {
               <Loading />
             </div>
           ) : (
-            <div className="dishesWrapper">
+            <div className="flex flex-wrap items-center justify-center w-full gap-4 dishesWrapper ">
               {dishesData.docItems?.map((item, index) => (
                 <AdminDishesCard
                   key={index}
@@ -55,7 +55,7 @@ const Dishes = () => {
             </div>
           )}
           <button
-            className="addNewBtn"
+            className="flex items-center justify-center gap-1 px-2 ml-auto text-white addNewBtn w-fit bg-nursh_dark_olive "
             onClick={() => {
               setIsShowAddNewItem(true);
               setItemType("dishes");
@@ -65,14 +65,14 @@ const Dishes = () => {
           </button>
         </section>
 
-        <section className="drinkSection">
+        <section className="flex flex-col gap-4 drinkSection">
           <h1>Drinks</h1>
           {drinksData?.isLoading ? (
             <div className="loadingContainer">
               <Loading />
             </div>
           ) : (
-            <div className="drinksWrapper">
+            <div className="flex flex-wrap items-center justify-center w-full gap-4 drinksWrapper ">
               {drinksData.docItems?.map((item, index) => (
                 <AdminDrinkCard
                   key={index}
@@ -86,7 +86,7 @@ const Dishes = () => {
             </div>
           )}
           <button
-            className="addNewBtn"
+            className="flex items-center justify-center gap-1 px-2 ml-auto text-white addNewBtn w-fit bg-nursh_dark_olive"
             onClick={() => {
               setIsShowAddNewItem(true);
               setItemType("drinks");
