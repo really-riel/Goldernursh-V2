@@ -33,7 +33,7 @@ const AdminHeader = () => {
 
   return (
     <RequireAdminLink>
-      <header className="flex items-center justify-between adminHeader lg:bg-white lg:shadow-card_shadow bg-nursh_green">
+      <header className="flex items-center justify-between px-2 adminHeader lg:bg-white lg:shadow-card_shadow bg-nursh_green">
         <motion.div
           className="text-white hamburgerMenu lg:hidden"
           whileTap={{ scale: 0.8 }}
@@ -87,7 +87,7 @@ const AdminHeader = () => {
             <Logo />
           </Link>
         </div>
-        <nav className="hidden pr-2 ml-auto laptopHeaderNav text-nursh_green lg:flex">
+        <nav className="hidden ml-auto laptopHeaderNav text-nursh_green lg:flex">
           <ul className="flex items-center gap-2">
             <Link to={"/"}>
               <li>Home</li>

@@ -548,9 +548,164 @@ export const dishesData = {
 export const drinksData = {
   isLoading: false,
   docItems: [
-    { id: 1, image: I3, drink: "Fanta", extra: "a drink", price: 1000 },
-    { id: 1, image: I3, drink: "Fanta", extra: "a drink", price: 1000 },
-    { id: 1, image: I3, drink: "Fanta", extra: "a drink", price: 1000 },
-    { id: 1, image: I3, drink: "Fanta", extra: "a drink", price: 1000 },
+    { id: 1, image: juice, drink: "Fanta", extra: "a drink", price: 1000 },
+    { id: 1, image: drinks, drink: "Fanta", extra: "a drink", price: 1000 },
+    { id: 1, image: juice, drink: "Fanta", extra: "a drink", price: 1000 },
+    { id: 1, image: drinks, drink: "Fanta", extra: "a drink", price: 1000 },
+  ],
+};
+
+export const staffsData = {
+  docItems: [
+    {
+      id: 1,
+      email: "adeolu@gmail.com",
+      name: "Adeolu",
+      image: p2,
+      role: "Admin",
+      lastLogin: 68812345,
+    },
+    {
+      id: 2,
+      email: "stephenBalogun@gmail.com",
+      name: "dave",
+      image: p3,
+      role: "cook",
+      lastLogin: 688677345,
+    },
+    {
+      id: 1,
+      email: "adu@gmail.com",
+      name: "lulu",
+      image: p1,
+      role: "chef",
+      lastLogin: 688167882345,
+    },
+  ],
+};
+
+export const adminOrdersData = {
+  isLoading: false,
+  docItems: [
+    {
+      id: 1,
+      user: "bola",
+      orderStatus: "pending",
+      total: 6000,
+      orderItems: [
+        {
+          quantity: 3,
+          image: I2,
+          mainMeal: "white rice",
+          extra: "a drink",
+          price: 2000,
+        },
+        {
+          quantity: 3,
+          image: I2,
+          mainMeal: "white rice",
+          extra: "a drink",
+          price: 2000,
+        },
+        {
+          quantity: 3,
+          image: I2,
+          mainMeal: "white rice",
+          extra: "a drink",
+          price: 2000,
+        },
+      ],
+    },
+    {
+      id: 2,
+      user: "Dave",
+      total: 5000,
+      orderStatus: "pending",
+      orderItems: [
+        {
+          quantity: 3,
+          image: I1,
+          mainMeal: "white rice",
+          extra: "a drink",
+          price: 1000,
+        },
+        {
+          quantity: 3,
+          image: I4,
+          mainMeal: "white rice",
+          extra: "a drink",
+          price: 2000,
+        },
+        {
+          quantity: 3,
+          image: I2,
+          mainMeal: "white rice",
+          extra: "a drink",
+          price: 2000,
+        },
+      ],
+    },
+    {
+      id: 3,
+
+      orderStatus: "delivered",
+      user: "john",
+      total: 4200,
+      orderItems: [
+        {
+          quantity: 3,
+          image: I4,
+          mainMeal: "poddrige",
+          extra: "a drink",
+          price: 1400,
+        },
+        {
+          quantity: 3,
+          image: I4,
+          mainMeal: "poddrige",
+          extra: "a drink",
+          price: 1400,
+        },
+        {
+          quantity: 3,
+          image: I4,
+          mainMeal: "poddrige",
+          extra: "a drink",
+          price: 1400,
+        },
+      ],
+    },
+    {
+      id: 4,
+      orderStatus: "cancelled",
+      user: "nema",
+      total: 4500,
+      orderItems: [
+        {
+          quantity: 3,
+          id: 4,
+          image: I1,
+          mainMeal: "fried rice",
+          extra: "a drink",
+          price: 1500,
+        },
+        {
+          quantity: 3,
+          id: 4,
+          image: I1,
+          mainMeal: "fried rice",
+          extra: "a drink",
+          price: 1500,
+        },
+        {
+          quantity: 3,
+          id: 4,
+          image: I1,
+          mainMeal: "fried rice",
+          extra: "a drink",
+          price: 1500,
+        },
+      ],
+    },
   ],
 };

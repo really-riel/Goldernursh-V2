@@ -29,8 +29,8 @@ const Dishes = () => {
   };
 
   return (
-    <main className="relative items-center Dishes">
-      <div className="sectionsContainer w-[95%] py-4 px-2">
+    <main className="grid place-items-center Dishes">
+      <div className="sectionsContainer w-[95%] py-4 ">
         <section className="flex flex-col justify-center gap-2 mb-4 dishesSection">
           <h1>Dishes</h1>
           <p>
