@@ -35,13 +35,14 @@ const Orders = () => {
       ? setData(docItems?.filter((item) => item.orderStatus === "delivered"))
       : setData(docItems);
 
-    const filteredSearch = docItems.filter((order) => {
-      return order.orderItems.some((item) =>
-        item.mainMeal.toLowerCase().includes(searchInput.toLowerCase())
-      );
-    });
-
-    setData(filteredSearch);
+    if (searchInput !== "") {
+      const filteredSearch = docItems.filter((order) => {
+        return order.orderItems.some((item) =>
+          item.mainMeal.toLowerCase().includes(searchInput.toLowerCase())
+        );
+      });
+      setData(filteredSearch);
+    }
   }, [docItems, selectedOption, searchInput]);
 
   useEffect(() => {
