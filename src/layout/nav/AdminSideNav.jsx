@@ -56,7 +56,7 @@ const AdminSideNav = ({ setIsSideNavOpen }) => {
         initial={{ opacity: 0, x: -300 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 200 }}
-        className="sideNav adminSideNav h-full fixed lg:static top-0 left-0 bottom-0 w-full text-white grid grid-cols-[70%_30%] text-[clamp(1rem,_0.7rem_+_1vw,_1.3rem)] lg:grid-cols-1  "
+        className="sideNav adminSideNav h-full fixed lg:static top-0 left-0 bottom-0 w-full text-white grid grid-cols-[70%_30%] text-[clamp(1rem,_0.7rem_+_1vw,_1.3rem)] lg:grid-cols-1 z-10  "
       >
         <section className="flex flex-col gap-6 py-4 overflow-auto bg-nursh_green">
           <div className="flex items-center justify-between px-2 ">
