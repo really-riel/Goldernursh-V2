@@ -21,6 +21,7 @@ import Missing from "./pages/Missing/Missing";
 import ProfileEdit from "./pages/Profile/ProfileEdit";
 import Orders from "./pages/Admin/Orders";
 import Inventory from "./pages/Admin/Inventory";
+import Notification from "./pages/Admin/Notifications";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -47,6 +48,7 @@ const App = () => {
           <Route path="dishes" element={<Dishes />} />
           <Route path="orders" element={<Orders />} />
           <Route path="inventory" element={<Inventory />} />
+          <Route path="notification" element={<Notification />} />
         </Route>
 
         <Route path="*" element={<Missing />} />

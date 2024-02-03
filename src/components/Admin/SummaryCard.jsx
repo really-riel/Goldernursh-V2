@@ -35,7 +35,7 @@ const SummaryCard = ({ total, category, type }) => {
     >
       <div className="flex summaryIconContainer ">
         <div
-          className={`summaryIcon bg-red-500 h-[48px] w-[48px] grid place-content-center rounded-[50%] ${iconBgColor}`}
+          className={`summaryIcon  h-[48px] w-[48px] grid place-content-center rounded-[50%] ${iconBgColor}`}
         >
           {(() => {
             switch (category.split(" ")[1]) {
